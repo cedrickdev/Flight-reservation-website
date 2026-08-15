@@ -1,0 +1,135 @@
+- [x] Donner aux boutons des angles légèrement arrondis et des survols plus expressifs, sans rompre le style premium.
+- [x] Faire évoluer les cartes de services avec un relief doux, un arrondi mesuré et des interactions de survol plus riches.
+- [x] Remplacer le point mobile de la ligne de vol Three.js par un avion stylisé, orienté selon la trajectoire.
+- [x] Vérifier les états desktop et mobile, puis compiler la révision de production.
+- [x] Faire évoluer le projet vers l’architecture full-stack avec base de données et stockage de fichiers.
+- [x] Concevoir la structure des demandes et des documents envoyés par les utilisateurs.
+- [x] Intégrer un dépôt de fichiers sécurisé au formulaire de contact.
+- [x] Tester la création de demande et la gestion des pièces jointes avant livraison.
+- [x] Rétablir le serveur de développement après la migration full-stack et vérifier sa disponibilité.
+- [x] Remplacer l’offre par la liste complète des services communiquée sur l’affiche.
+- [x] Mettre à jour l’adresse vers Douala–Makepe, face CNPS.
+- [x] Utiliser le nouveau logo officiel fourni dans l’interface et les métadonnées.
+- [x] Corriger la trajectoire Three.js afin que l’avion avance dans un seul sens, sans interférer avec le texte du hero.
+- [x] Ajouter une gestion de thème clair/sombre cohérente avec l’identité premium.
+- [x] Vérifier les états responsive, les tests et la compilation après mise à jour.
+- [x] Ajouter un visuel éditorial distinct à chaque section principale : globe, aile d’avion, trajectoire de vol et scènes de voyage.
+- [x] Concevoir des transitions sobres et cohérentes entre les sections sans alourdir le chargement.
+- [x] Empêcher le thème sombre de modifier la lisibilité et les couleurs du texte du hero.
+- [x] Séparer visuellement les cartes Conciergerie et Accompagnement PNC afin qu’elles ne soient plus compactées.
+- [x] Retirer le fond blanc du logo officiel et préserver sa transparence dans l’en-tête et le footer.
+- [x] Revalider desktop, mobile, thème clair/sombre, tests et build après ces changements.
+- [x] Ajouter un visuel éditorial distinct à chaque section principale : globe, aile d’avion, trajectoire de vol et scènes de voyage.
+- [x] Concevoir des transitions sobres et cohérentes entre les sections sans alourdir le chargement.
+- [x] Empêcher le thème sombre de modifier la lisibilité et les couleurs du texte du hero.
+- [x] Séparer visuellement les cartes Conciergerie et Accompagnement PNC afin qu’elles ne soient plus compactées.
+- [x] Retirer le fond blanc du logo officiel et préserver sa transparence dans l’en-tête et le footer.
+- [x] Revalider desktop, mobile, thème clair/sombre, tests et build après ces changements.
+- [x] Ajouter un visuel éditorial distinct à chaque section principale : globe, aile d’avion, trajectoire de vol et scènes de voyage.
+- [x] Concevoir des transitions sobres et cohérentes entre les sections sans alourdir le chargement.
+- [x] Empêcher le thème sombre de modifier la lisibilité et les couleurs du texte du hero.
+- [x] Séparer visuellement les cartes Conciergerie et Accompagnement PNC afin qu’elles ne soient plus compactées.
+- [x] Retirer le fond blanc du logo officiel et préserver sa transparence dans l’en-tête et le footer.
+- [x] Revalider desktop, mobile, thème clair/sombre, tests et build après ces changements.
+- [x] Retirer « Makepe, Douala » des textes éditoriaux et le conserver uniquement dans le bloc d’adresse.
+- [x] Transformer le visuel du globe en arrière-plan de section avec contenu textuel superposé et contraste accessible.
+- [x] Revalider le rendu, les tests et le build après ces corrections.
+- [x] Retirer les mentions de Douala/Makepe restantes dans les métadonnées SEO et les données structurées, conformément à la consigne « uniquement dans l’adresse ».
+- [x] Revalider le build après le nettoyage des métadonnées.
+- [x] Supprimer la mention de Douala dans le champ areaServed des données structurées, afin de respecter strictement la consigne de localisation uniquement dans l’adresse.
+- [x] Relancer check et build après ce dernier nettoyage.
+- [x] Supprimer les contours visibles des contrôles thème et langue tout en conservant un focus clavier accessible.
+- [x] Remplacer l’animation mécanique du hero par une séquence narrative et progressive, avec alternative reduced-motion.
+- [x] Humaniser la direction visuelle en réduisant les motifs répétitifs et en ajoutant des micro-interactions contextuelles.
+- [x] Appliquer les recommandations WCAG 2.2 : skip link, landmarks, focus-visible, labels, alt text et cibles tactiles.
+- [x] Appliquer les bonnes pratiques de sécurité, compatibilité, performance et SEO fournies dans les documents joints.
+- [x] Revalider desktop, mobile, clavier, reduced-motion, tests et build.
+- [x] Ajouter les protections de sécurité pertinentes sans casser le runtime : en-têtes CSP compatibles, nosniff, referrer policy et permissions policy.
+- [x] Réduire le coût initial de Three.js par chargement différé et vérifier le découpage du bundle.
+- [x] Revalider explicitement le rendu mobile après cette passe.
+- [x] Vérifier par inspection structurelle le skip link, l’ordre DOM natif et les focus-visible au clavier.
+- [x] Vérifier par inspection CSS le comportement reduced-motion du hero, de Three.js et des transitions.
+- [x] Remplacer le visuel de la section « Un point de départ pour vos projets » par le logo officiel transparent, placé à côté du texte.
+- [x] Vérifier l’alignement, la hiérarchie et les états responsive de cette section sans redesign hors périmètre.
+- [x] Optimiser les images avec des dimensions explicites, des priorités de chargement cohérentes, lazy loading below-the-fold et formats modernes compatibles avec l’architecture actuelle.
+- [x] Vérifier le parcours complet, les viewport desktop/mobile, le layout shift, les tests et le build.
+- [x] Revalider les pages clés du parcours complet après la passe WebP/logo : accueil, à propos, services et contact, sur desktop et mobile.
+- [x] Contrôler explicitement le layout shift des sections avec images remplacées et documenter les ajustements nécessaires.
+- [x] Clarifier et configurer le canal d’envoi vers l’adresse e-mail professionnelle sans exposer de secret.
+- [x] Renforcer les états hover, focus et active des cartes de services avec une interaction dynamique mais sobre.
+- [x] Corriger le cadrage de l’image globe afin que le globe soit entièrement visible dans la section.
+- [x] Installer ou utiliser Lighthouse et produire un audit des performances, accessibilité, SEO et bonnes pratiques.
+- [x] Appliquer les optimisations Lighthouse pertinentes et documenter les gains et limites.
+- [x] Créer une compétence réutilisable selon le workflow skill-creator, la valider et la livrer.
+- [x] Revalider le parcours complet, les tests, TypeScript, build et rendu responsive.
+- [x] Remplacer toutes les coordonnées e-mail visibles par contact@trustelitetravels.com.
+- [x] Demander et configurer les secrets SMTP Infomaniak via le mécanisme sécurisé du projet.
+- [x] Envoyer chaque demande du formulaire vers l’adresse professionnelle avec un contenu sécurisé et utile.
+- [x] Ajouter un test unitaire du service d’envoi e-mail sans envoyer de message réel.
+- [x] Rendre le texte, le logo, le contrôle de langue, le contrôle de thème et le CTA lisibles en thème clair.
+- [x] Restaurer les proportions naturelles de l’image globe sans compression ni cadrage artificiel.
+- [x] Repositionner la trajectoire et l’avion dans la zone supérieure du hero, au-dessus du texte.
+- [x] Revalider les thèmes clair/sombre, desktop/mobile, contraste, tests et build.
+- [x] Revalider visuellement la version finale en thème sombre et clair sur les pages clés après ces corrections.
+- [x] Contrôle sombre réel effectué sur accueil, à propos, services et contact avec la clé d’audit isolée.
+- [x] Revalider la version mobile finale de l’accueil et de la page À propos après le repositionnement de l’avion et la correction du globe.
+- [x] Vérifier explicitement le contraste des éléments de navbar et CTA dans les deux thèmes, puis consigner le résultat.
+- [x] Éclaircir l’overlay de la zone texte du globe et garantir une lecture confortable.
+- [x] Forcer les libellés des CTA à rester noirs sur leurs fonds clairs.
+- [x] Corriger les logos, textes de navigation et libellés de services selon le thème clair ou sombre.
+- [x] Rendre l’avion et la trajectoire du hero visibles pendant l’animation, avec une séquence fiable.
+- [x] Revalider thèmes, desktop/mobile, animation, tests et build.
+- [x] Revalider visuellement le thème sombre après cette dernière passe de contraste, logo et services.
+- [x] Vérifier dans l’aperçu que l’avion et la trajectoire sont visibles pendant le cycle réel d’animation, confirmé par deux captures Chromium temporelles.
+- [x] Corriger le contraste du mode sombre : la section Services ne doit pas devenir ivoire avec du texte blanc invisible.
+- [x] Rétablir une animation hero clairement observable : avion et trajectoire doivent se déplacer dans la zone supérieure du hero.
+- [x] Revalider accueil, services, thèmes, animation, tests et build après correction.
+- [x] Garantir une animation hero visible avec un fallback CSS/DOM si Three.js ou WebGL ne se monte pas ; validé avec WebGL désactivé.
+- [x] Refaire la matrice de contraste des textes, cartes, CTA, navbar et contrôles dans les thèmes clair et sombre.
+- [x] Vérifier le rendu réel du hero et des pages clés avant nouveau checkpoint : accueil, services, à propos et contact capturés après la dernière passe.
+- [x] Remplacer le fallback en forme de flèche par un grand avion stylisé identifiable, placé en haut à gauche et animé sur une trajectoire.
+- [x] Restaurer le thème clair de la section Services avec un fond blanc/ivoire et une typographie sombre, sans modifier la typographie éditoriale.
+- [x] Vérifier la cohérence visuelle des thèmes clair et sombre avant checkpoint : capture réelle claire et sombre, hero et Services lisibles.
+- [x] Décaler l’animation sous la hauteur réelle de la navbar pour qu’elle ne soit plus masquée.
+- [x] Conserver une grande animation avion/trajectoire en haut à gauche de la section hero.
+- [x] Revalider le positionnement desktop, mobile et thèmes avant nouveau checkpoint : captures desktop/mobile en clair et sombre après le recalage.
+- [x] Remplacer la petite trajectoire décorative par une scène de vol ample couvrant toute la bande supérieure du hero, avec caméra panoramique.
+- [x] Détailler la silhouette de l’avion et rendre son déplacement narratif clairement perceptible.
+- [x] Vérifier que la scène reste sous la navbar, au-dessus du texte et cohérente dans les deux thèmes, après revalidation desktop et mobile.
+- [x] Limiter la scène de vol à la zone supérieure sombre, sans toucher l’image à droite ni le texte inférieur ; validation desktop et mobile finale effectuée.
+- [x] Construire un trajet ample à zigzags doux entre les points A et B.
+- [x] Ralentir le déplacement de l’avion et vérifier les marges visuelles de la composition ; marges contrôlées en clair et sombre desktop, puis mobile.
+- [x] Descendre le corridor d’animation d’environ 50% dans la zone sombre du hero, avec offset final sécurisé.
+- [x] Préserver l’espace du texte inférieur et la séparation avec la photo de droite.
+- [x] Revalider les thèmes, desktop/mobile, tests et build après le déplacement : captures claire desktop/mobile et sombre desktop.
+- [x] Recaler l’avion exactement sur la trajectoire et orienter sa silhouette selon la tangente du chemin, avec ancrage géométrique explicite dans Three.js et SVG.
+- [x] Agrandir le symbole officiel Trust Elite Travel dans la navbar, le rendre doré et masquer le texte inférieur.
+- [x] Revalider les deux thèmes, le hero, la navbar, les tests et le build : captures desktop clair/sombre et mobile clair, Vitest 6/6.
+- [x] Réutiliser dans la navbar exactement la source du logo officiel actuellement affiché dans le footer.
+- [x] Préserver les proportions, la transparence et la lisibilité du logo officiel dans les deux thèmes, avec couleurs natives identiques au footer.
+- [x] Revalider navbar desktop/mobile, hero, tests et build après correction : clair desktop/mobile et sombre desktop capturés.
+- [x] Masquer uniquement le texte sous le logo dans la navbar sans supprimer le symbole officiel.
+- [x] Vérifier le symbole doré dans les thèmes clair/sombre et sur mobile.
+- [x] Revalider les tests, TypeScript, build et navbar après correction.
+- [x] Appliquer explicitement le rendu or au pictogramme recadré de la navbar et confirmer sa lisibilité en clair, sombre et mobile.
+- [x] Consigner la lisibilité du symbole doré recadré après teinte or en clair desktop, sombre desktop et mobile.
+- [x] Descendre tout le dessin de l’animation du hero d’environ 50 %, trajectoire et avion ensemble.
+- [x] Maintenir une marge nette avec le texte inférieur et la photo de droite.
+- [x] Revalider thèmes, desktop/mobile, tests et build après le nouveau placement.
+- [x] Consigner la séparation finale du trajet et de l’avion avec le texte inférieur et la photo de droite après le nouvel abaissement.
+- [x] Documenter la vérification finale du hero en clair desktop, sombre desktop et mobile après le déplacement.
+- [x] Revalider explicitement le hero sombre après le dernier correctif responsive du corridor : avion et trajet visibles, sans contact avec le texte.
+- [x] Définir le thème sombre comme valeur par défaut sur un premier chargement, quel que soit l’appareil.
+- [x] Préserver la bascule manuelle vers le thème clair et la persistance du choix utilisateur.
+- [x] Revalider le premier chargement, les deux thèmes, responsive, tests et build.
+- [x] Vérifier explicitement la bascule vers le thème clair en desktop et mobile après le changement de défaut sombre.
+- [x] Envoyer automatiquement un e-mail de confirmation à l’adresse du demandeur après soumission réussie.
+- [x] Rédiger le message de confirmation : demande reçue, traitement en cours, retour prochain de l’équipe.
+- [x] Retirer le numéro de référence de l’écran de succès et de ses textes associés.
+- [x] Tester le flux d’envoi, le rendu mobile, les tests et le build.
+- [x] Valider le flux complet de soumission dans l’interface jusqu’à l’écran de succès sans référence.
+- [x] Revalider explicitement l’écran de succès sur mobile et documenter le message de confirmation.
+- [x] Vérifier par test ciblé du routeur l’appel de l’e-mail demandeur.
+- [ ] Vérifier l’état du dépôt GitHub et la branche distante avant publication.
+- [ ] Publier les modifications sur `main` avec l’auteur `cedrick dev <cedrickfeze24@gmail.com>`.
+- [ ] Vérifier le commit et la branche `main` sur GitHub après le push.
