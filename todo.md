@@ -138,4 +138,8 @@
 - [x] Valider le build et documenter les variables d’environnement nécessaires au déploiement.
 - [x] Faire utiliser pnpm à Vercel au lieu de `npm install --frozen-lockfile`.
 - [x] Retirer ou isoler `@builder.io/vite-plugin-jsx-loc`, incompatible avec Vite 7 en résolution npm stricte.
-- [ ] Relancer et confirmer une publication Vercel réelle après correction depuis GitHub.
+- [x] Relancer et confirmer une publication Vercel réelle après correction depuis GitHub.
+- [x] Pousser la correction Vercel sur `main` avec un message Conventional Commits et l’auteur `cedrick dev`.
+- [x] Diagnostiquer pourquoi les images du hero et des sections ne sont pas présentes dans le déploiement Vercel.
+- [x] Corriger les URLs ou le transport des images pour la production Vercel.
+- [ ] Vérifier le rendu publié, puis pousser la correction sur `main`.
