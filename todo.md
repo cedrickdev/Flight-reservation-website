@@ -142,4 +142,6 @@
 - [x] Pousser la correction Vercel sur `main` avec un message Conventional Commits et l’auteur `cedrick dev`.
 - [x] Diagnostiquer pourquoi les images du hero et des sections ne sont pas présentes dans le déploiement Vercel.
 - [x] Corriger les URLs ou le transport des images pour la production Vercel.
-- [ ] Vérifier le rendu publié, puis pousser la correction sur `main`.
+- [x] Vérifier le rendu publié, puis pousser la correction sur `main` : commit `d68a9c0`, statut Vercel `success` ; domaine public HTTP 200 et 10 assets hero/logo/sections HTTP 200 avec MIME `image/webp` ou `image/png`.
+- [x] Uniformiser la grille des cartes de services pour obtenir des cartes ordonnées et de dimensions cohérentes.
+- [x] Vérifier la grille sur desktop et mobile, puis valider tests et build : desktop en 4 colonnes, tablette en 2 colonnes, mobile en 1 colonne ; Vitest 7/7, TypeScript et build validés.
