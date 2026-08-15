@@ -130,6 +130,12 @@
 - [x] Valider le flux complet de soumission dans l’interface jusqu’à l’écran de succès sans référence.
 - [x] Revalider explicitement l’écran de succès sur mobile et documenter le message de confirmation.
 - [x] Vérifier par test ciblé du routeur l’appel de l’e-mail demandeur.
-- [ ] Vérifier l’état du dépôt GitHub et la branche distante avant publication.
-- [ ] Publier les modifications sur `main` avec l’auteur `cedrick dev <cedrickfeze24@gmail.com>`.
-- [ ] Vérifier le commit et la branche `main` sur GitHub après le push.
+- [x] Vérifier l’état du dépôt GitHub et la branche distante avant publication.
+- [x] Publier les modifications sur `main` avec l’auteur `cedrick dev <cedrickfeze24@gmail.com>`.
+- [x] Vérifier le commit et la branche `main` sur GitHub après le push.
+- [x] Diagnostiquer l’avertissement Vercel sur Next.js et les scripts pnpm ignorés.
+- [x] Définir la configuration Vercel adaptée à React/Vite et documenter la limite actuelle du backend Express/tRPC.
+- [x] Valider le build et documenter les variables d’environnement nécessaires au déploiement.
+- [x] Faire utiliser pnpm à Vercel au lieu de `npm install --frozen-lockfile`.
+- [x] Retirer ou isoler `@builder.io/vite-plugin-jsx-loc`, incompatible avec Vite 7 en résolution npm stricte.
+- [ ] Relancer et confirmer une publication Vercel réelle après correction depuis GitHub.
