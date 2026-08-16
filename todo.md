@@ -153,3 +153,17 @@
 - [x] Vérifier la lisibilité, les thèmes et le responsive de la nouvelle composition, puis valider tests et build : desktop/mobile capturés, cartes lisibles au premier plan, Vitest 7/7, TypeScript et build validés.
 - [x] Rendre nettement visible la photo de trajectoire en background de la section Services.
 - [x] Revalider visibilité, lisibilité, thèmes, responsive, tests et build : photo renforcée, calques corrigés, desktop/mobile capturés, Vitest 7/7, TypeScript et build validés.
+- [x] Rendre visibles en mode clair les séparateurs entre WhatsApp, E-mail et la base du formulaire de contact.
+- [x] Arrondir légèrement les menus et contrôles du formulaire sans perdre la sobriété premium.
+- [x] Épurer les animations du stepper et vérifier reduced-motion, thèmes, responsive, tests et build : transitions courtes, entrée de panneau sobre, menu mobile légèrement animé et désactivation reduced-motion ; desktop/mobile, Vitest 7/7, TypeScript et build validés.
+- [x] Lire et appliquer les règles du guide amCharts 5 pour le globe géographique : MapChart orthographique, GeoJSON worldLow, GraticuleSeries, `.new()`, couleurs am5 et disposal root.
+- [x] Intégrer un globe 3D doré remplaçant le « o » de « Trajectoire », avec rotation automatique de 30 secondes et boucle infinie.
+- [x] Ajouter glisser-déposer, zoom molette, tooltips pays, sélection de régions et slider horizontal.
+- [x] Vérifier animations d’entrée, thèmes, responsive, reduced-motion, tests et build : globe visible dans le hero, aucun log amCharts après intégration, Vitest 7/7, TypeScript et build validés.
+- [x] Retirer le slider horizontal visible sous le globe et supprimer l’espace réservé.
+- [x] Revalider le rendu du hero, les tests et le build après le retrait du slider : jauge supprimée, composition resserrée, Vitest 7/7, TypeScript et build validés.
+- [x] Recentrer le globe dans le mot « Trajectoire » sur desktop et mobile.
+- [x] Optimiser la disposition du texte hero sur mobile : tailles, retours à la ligne, espacements et CTA.
+- [x] Revalider le hero desktop/mobile, les thèmes, les tests et le build : captures 390px et 1280px validées, globe centré, contenu mobile lisible, Vitest 7/7, TypeScript et build validés.
+- [x] Décaler le globe vers la droite et vers le bas pour le centrer entre le « t » et le « i » de « trajectoire ».
+- [x] Revalider le rendu desktop/mobile, les tests et le build après ce réglage : captures 390px et 1280px validées, Vitest 7/7, TypeScript et build validés.
