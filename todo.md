@@ -226,3 +226,11 @@
 
 - [x] Vérifier que le globe, le hero et les autres assets multimédias utilisent des références compatibles avec la production Vercel : URLs publiques absolues, redirections suivies, 7 assets vérifiés HTTP 200 avec MIME PNG/WebP.
 - [x] Valider le build et le rendu des assets en production, puis créer le commit et pousser sur `main` avec l’auteur `cedrick dev`.
+
+- [x] Remonter le contenu du hero sur mobile pour réduire l’espace supérieur et garder le slogan visible.
+- [x] Ajuster le titre, le paragraphe et les CTA du hero mobile afin que le texte inférieur soit entièrement lisible sans débordement.
+- [x] Revalider mobile/desktop, les thèmes, les tests et le build après la correction responsive.
+
+- [x] Diagnostiquer l’erreur de chargement dynamique du chunk Contact en production.
+- [x] Corriger la stratégie de chargement/cache des chunks Vite et prévoir un fallback de récupération de version.
+- [x] Valider la navigation Contact, le build, les artefacts et le déploiement de production.

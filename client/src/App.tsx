@@ -2,16 +2,36 @@
 import { lazy, Suspense } from "react";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
-import { Header, Footer } from "./components/SiteChrome";
+import { Footer, Header, WhatsAppFloat } from "./components/SiteChrome";
 import Home from "./pages/Home";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
-const Services = lazy(() => import("./pages/Services"));
-const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
-const About = lazy(() => import("./pages/About"));
-const Contact = lazy(() => import("./pages/Contact"));
-const NotFound = lazy(() => import("./pages/NotFound"));
+const CHUNK_RECOVERY_KEY = "trust-elite-chunk-recovery";
+
+type LazyPageModule = { default: React.ComponentType<any> };
+
+function lazyWithRecovery(load: () => Promise<LazyPageModule>) {
+  return lazy(async () => {
+    try {
+      const page = await load();
+      if (typeof window !== "undefined") window.sessionStorage.removeItem(CHUNK_RECOVERY_KEY);
+      return page;
+    } catch (error) {
+      if (typeof window !== "undefined" && !window.sessionStorage.getItem(CHUNK_RECOVERY_KEY)) {
+        window.sessionStorage.setItem(CHUNK_RECOVERY_KEY, "1");
+        window.location.reload();
+      }
+      throw error;
+    }
+  });
+}
+
+const Services = lazyWithRecovery(() => import("./pages/Services"));
+const ServiceDetail = lazyWithRecovery(() => import("./pages/ServiceDetail"));
+const About = lazyWithRecovery(() => import("./pages/About"));
+const Contact = lazyWithRecovery(() => import("./pages/Contact"));
+const NotFound = lazyWithRecovery(() => import("./pages/NotFound"));
 
 function PageFallback() {
   return <div className="route-fallback" role="status" aria-live="polite">Chargement…</div>;
@@ -33,5 +53,5 @@ function Router() {
 }
 
 export default function App() {
-  return <ErrorBoundary><ThemeProvider defaultTheme="dark" switchable><LanguageProvider><div className="app-shell"><Header /><Router /><Footer /></div></LanguageProvider></ThemeProvider></ErrorBoundary>;
+  return <ErrorBoundary><ThemeProvider defaultTheme="dark" switchable><LanguageProvider><div className="app-shell"><Header /><Router /><WhatsAppFloat /><Footer /></div></LanguageProvider></ThemeProvider></ErrorBoundary>;
 }
