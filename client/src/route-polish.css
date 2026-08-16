@@ -464,3 +464,183 @@ html:not(.dark) .site-header .brand-logo-crop .brand-logo-official,
     height: auto;
   }
 }
+
+
+/* Dark-theme contrast safeguards for footer and contact CTAs. */
+.dark .site-footer {
+  background:#0d0d0c;
+  color:#f6f2ea;
+}
+.dark .site-footer .footer-brand p,
+.dark .site-footer .footer-bottom {
+  color:rgba(246,242,234,.78);
+}
+.dark .site-footer .footer-contact strong,
+.dark .site-footer .footer-contact a,
+.dark .site-footer .footer-link {
+  color:#f6f2ea!important;
+}
+.dark .site-footer .footer-contact a:hover,
+.dark .site-footer .footer-link:hover {
+  color:#f0d991!important;
+}
+.dark .site-footer .footer-label {
+  color:#f0d991;
+}
+.dark .contact-banner .button-light,
+.dark .button-primary,
+.dark .header-cta {
+  background:#f0d991;
+  color:#11110f!important;
+}
+.dark .contact-banner .button-light:hover,
+.dark .button-primary:hover,
+.dark .header-cta:hover {
+  background:#f8e6ad;
+  color:#11110f!important;
+}
+.dark .contact-banner .button-light:focus-visible,
+.dark .button-primary:focus-visible,
+.dark .header-cta:focus-visible,
+.dark .site-footer a:focus-visible {
+  outline:2px solid #f8e6ad;
+  outline-offset:4px;
+}
+.dark .contact-banner .button-light svg,
+.dark .button-primary svg,
+.dark .header-cta svg {
+  color:#11110f;
+}
+@media (prefers-contrast: more) {
+  .dark .site-footer .footer-contact a,
+  .dark .site-footer .footer-link,
+  .dark .contact-banner .button-light,
+  .dark .button-primary,
+  .dark .header-cta { text-decoration-thickness:2px; }
+}
+
+
+/* Light-theme contact CTA: the dark button needs an ivory label, not the global dark CTA color. */
+html:not(.dark) .contact-banner .button-light {
+  background:#11110f;
+  color:#fffaf0!important;
+}
+html:not(.dark) .contact-banner .button-light:hover {
+  background:#2b291f;
+  color:#fffaf0!important;
+}
+html:not(.dark) .contact-banner .button-light svg {
+  color:#fffaf0;
+}
+
+
+/* Services composition: the flight route becomes an atmospheric background behind the cards. */
+.services-section--route-bg {
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:#f6f2ea;
+}
+.services-route-background,
+.services-route-scrim {
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+}
+.services-route-background {
+  z-index:-2;
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  opacity:.18;
+  transform:scale(1.02);
+}
+.services-route-scrim {
+  z-index:-1;
+  background:linear-gradient(180deg,rgba(246,242,234,.94) 0%,rgba(246,242,234,.7) 38%,rgba(246,242,234,.9) 100%);
+}
+.services-section-content {
+  position:relative;
+  z-index:1;
+}
+.services-route-caption {
+  display:flex;
+  align-items:center;
+  gap:9px;
+  margin:0 0 16px;
+  color:#765b18;
+  font-size:10px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.services-section--route-bg .service-rail {
+  position:relative;
+  z-index:2;
+}
+html:not(.dark) .services-section--route-bg .service-card {
+  background:rgba(255,253,250,.94);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  border-color:rgba(17,17,15,.16);
+}
+html:not(.dark) .services-section--route-bg .service-card-featured {
+  background:rgba(231,214,165,.94);
+}
+.dark .services-section--route-bg {
+  background:#11110f;
+}
+.dark .services-section--route-bg .services-route-background {
+  opacity:.34;
+}
+.dark .services-section--route-bg .services-route-scrim {
+  background:linear-gradient(180deg,rgba(17,17,15,.88) 0%,rgba(17,17,15,.62) 40%,rgba(17,17,15,.9) 100%);
+}
+.dark .services-section--route-bg .services-route-caption {
+  color:#f0d991;
+}
+.dark .services-section--route-bg .service-card {
+  background:rgba(23,23,19,.9);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+.dark .services-section--route-bg .service-card-featured {
+  background:rgba(48,40,21,.94);
+}
+@media (max-width:760px) {
+  .services-route-background { background-position:62% center; opacity:.14; }
+  .services-route-caption { margin-bottom:12px; }
+  .services-section--route-bg .service-card { backdrop-filter:none; -webkit-backdrop-filter:none; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .services-route-background { transform:none; }
+}
+
+
+/* Make the route photograph unmistakable while keeping the card content readable. */
+.services-section--route-bg .services-route-background {
+  z-index:0;
+  opacity:.58;
+  background-position:center 54%;
+  transform:scale(1.01);
+}
+.services-section--route-bg .services-route-scrim {
+  z-index:1;
+  background:linear-gradient(180deg,rgba(246,242,234,.64) 0%,rgba(246,242,234,.28) 42%,rgba(246,242,234,.72) 100%);
+}
+.services-section--route-bg .services-section-content {
+  z-index:2;
+}
+.services-section--route-bg .service-rail {
+  z-index:3;
+}
+.dark .services-section--route-bg .services-route-background {
+  opacity:.68;
+  background-position:center 54%;
+}
+.dark .services-section--route-bg .services-route-scrim {
+  background:linear-gradient(180deg,rgba(17,17,15,.54) 0%,rgba(17,17,15,.24) 42%,rgba(17,17,15,.66) 100%);
+}
+@media (max-width:760px) {
+  .services-section--route-bg .services-route-background { opacity:.5; background-position:62% center; }
+  .dark .services-section--route-bg .services-route-background { opacity:.6; }
+}

@@ -145,3 +145,11 @@
 - [x] Vérifier le rendu publié, puis pousser la correction sur `main` : commit `d68a9c0`, statut Vercel `success` ; domaine public HTTP 200 et 10 assets hero/logo/sections HTTP 200 avec MIME `image/webp` ou `image/png`.
 - [x] Uniformiser la grille des cartes de services pour obtenir des cartes ordonnées et de dimensions cohérentes.
 - [x] Vérifier la grille sur desktop et mobile, puis valider tests et build : desktop en 4 colonnes, tablette en 2 colonnes, mobile en 1 colonne ; Vitest 7/7, TypeScript et build validés.
+- [x] Corriger la lisibilité en thème sombre du footer, de l’adresse Douala–Makepe, du lien Faire une demande et du bouton Nous contacter.
+- [x] Vérifier les contrastes clair/sombre, les tests et le build après correction : règles explicites pour le footer et les CTA, aperçu validé, Vitest 7/7, TypeScript et build validés.
+- [x] Rendre le bouton « Nous contacter » visible dans la bannière Contact en mode clair.
+- [x] Vérifier le bouton Contact en clair et sombre, puis valider tests et build : contraste explicite en clair et sombre, aperçu clair validé, Vitest 7/7, TypeScript et build validés.
+- [x] Transformer l’image de trajectoire en arrière-plan de la section Services et superposer les cartes au premier plan.
+- [x] Vérifier la lisibilité, les thèmes et le responsive de la nouvelle composition, puis valider tests et build : desktop/mobile capturés, cartes lisibles au premier plan, Vitest 7/7, TypeScript et build validés.
+- [x] Rendre nettement visible la photo de trajectoire en background de la section Services.
+- [x] Revalider visibilité, lisibilité, thèmes, responsive, tests et build : photo renforcée, calques corrigés, desktop/mobile capturés, Vitest 7/7, TypeScript et build validés.
