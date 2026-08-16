@@ -250,3 +250,23 @@
 - [x] Ajouter un message de succès bilingue après soumission réussie du formulaire.
 - [x] Ajouter une animation de confirmation visuelle sobre et compatible avec reduced-motion.
 - [x] Revalider le flux de soumission, les thèmes, le responsive, les tests et le build.
+
+- [x] Rendre visibles les textes de la section « Une vision plus large » dans les thèmes clair et sombre.
+- [x] Retirer tout bouton WhatsApp flottant de type FAB et ses styles résiduels.
+- [x] Revalider les thèmes, les pages, les tests et le build.
+
+- [x] Forcer le titre et le descriptif de « Une vision plus large » en couleur claire sur l’image du globe.
+- [x] Vérifier l’overlay et le contraste dans les thèmes clair et sombre.
+- [x] Revalider les tests et le build après la correction.
+
+- [x] Diagnostiquer pourquoi le texte de la section globe reste sombre malgré les overrides de contraste.
+- [x] Corriger la source réelle de la couleur au niveau du composant ou de la cascade effective.
+- [x] Valider le rendu réel, les thèmes, les tests et le build après correction définitive.
+
+- [x] Corriger le texte sombre du bloc globe observé sur la capture de production.
+- [x] Neutraliser opacity, mix-blend-mode et text-fill-color hérités, puis ajouter une surface de lecture stable.
+- [x] Valider le rendu comparatif, les thèmes, les tests et le build.
+
+- [ ] Consigner et diagnostiquer l’écart entre le bloc globe local et le rendu sombre observé en production.
+- [ ] Corriger la cause effective du texte sombre, pas seulement ajouter un nouvel override redondant.
+- [ ] Vérifier visuellement le bloc exact en production avant toute annonce de résolution.

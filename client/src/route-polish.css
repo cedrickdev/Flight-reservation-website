@@ -952,8 +952,7 @@ html:not(.dark) .contact-area .aside-note {
 .contact-banner-actions { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
 .button-light--outline { background:transparent; border:1px solid currentColor; color:inherit; }
 .button-light--outline:hover { background:var(--ink); color:var(--ivory); }
-.whatsapp-float { position:fixed; right:22px; bottom:22px; z-index:30; display:inline-flex; align-items:center; gap:9px; min-height:48px; padding:0 17px; border:1px solid rgba(255,255,255,.22); border-radius:999px; background:#1d9b61; color:#fff; box-shadow:0 12px 28px rgba(0,0,0,.2); font-family:var(--font-sans); font-size:12px; font-weight:700; letter-spacing:.04em; transition:transform .2s var(--ease-out),box-shadow .2s var(--ease-out); }
-.whatsapp-float:hover { color:#fff; transform:translateY(-3px); box-shadow:0 16px 34px rgba(0,0,0,.28); }
+
 .footer-socials { display:flex; gap:8px; margin-top:18px; }
 .footer-social-pending { display:grid; width:30px; height:30px; place-items:center; border:1px solid var(--line); border-radius:50%; color:var(--muted); opacity:.65; }
 .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
@@ -980,12 +979,11 @@ html:not(.dark) .trust-proof-card { background:#fffdfa; border-color:rgba(17,17,
   .faq-section { padding-top:64px; padding-bottom:74px; }
   .faq-item summary { padding:19px 0; font-size:1.35rem; }
   .faq-item p { padding-right:0; }
-  .whatsapp-float { right:14px; bottom:14px; min-height:46px; padding:0 14px; }
   .contact-banner-actions { align-items:stretch; flex-direction:column; width:100%; }
   .contact-banner-actions > * { justify-content:center; }
 }
 @media (prefers-reduced-motion:reduce) {
-  .faq-item summary svg, .whatsapp-float { transition:none; }
+  .faq-item summary svg { transition:none; }
 }
 
 
@@ -1446,4 +1444,110 @@ html.dark .faq-section .section-heading h2 { color: #f6f2ea; }
     animation: none;
   }
   .complete-icon-pulse { opacity: .35; transform: none; }
+}
+
+
+/* Vision section contrast: the editorial copy remains readable over the globe image in both themes. */
+.visual-globe::after {
+  background: linear-gradient(90deg, rgba(8,8,7,.84) 0%, rgba(8,8,7,.62) 52%, rgba(8,8,7,.22) 100%);
+}
+.visual-globe .visual-content h3,
+.visual-globe .visual-content > p:not(.service-eyebrow),
+.visual-globe .visual-caption {
+  color: #fffdf5 !important;
+}
+.visual-globe .visual-content h3 em,
+.visual-globe .visual-content .service-eyebrow,
+.visual-globe .visual-caption svg {
+  color: #f0d991 !important;
+}
+html:not(.dark) .section-with-visual .quiet-commitments {
+  color: #171613;
+}
+html:not(.dark) .section-with-visual .quiet-commitments div {
+  border-color: rgba(17,17,15,.18);
+}
+html:not(.dark) .section-with-visual .quiet-commitments svg {
+  color: #9b7621;
+}
+html:not(.dark) .section-with-visual .quiet-commitments span {
+  color: #4a473f;
+}
+html.dark .section-with-visual .quiet-commitments {
+  color: #f5efe4;
+}
+html.dark .section-with-visual .quiet-commitments div {
+  border-color: rgba(245,239,228,.2);
+}
+html.dark .section-with-visual .quiet-commitments svg {
+  color: #d7b84f;
+}
+html.dark .section-with-visual .quiet-commitments span {
+  color: #d8d0c1;
+}
+
+
+/* Final globe-copy contrast override: prevent inherited section colors from turning the editorial copy dark. */
+html:not(.dark) .visual-globe .visual-content h3,
+html:not(.dark) .visual-globe .visual-content h3 em,
+html:not(.dark) .visual-globe .visual-content > p:not(.service-eyebrow),
+html:not(.dark) .visual-globe .visual-caption,
+html.dark .visual-globe .visual-content h3,
+html.dark .visual-globe .visual-content h3 em,
+html.dark .visual-globe .visual-content > p:not(.service-eyebrow),
+html.dark .visual-globe .visual-content .visual-caption {
+  color: #fffaf0 !important;
+}
+html:not(.dark) .visual-globe .visual-content .service-eyebrow,
+html:not(.dark) .visual-globe .visual-content .visual-caption svg,
+html.dark .visual-globe .visual-content .service-eyebrow,
+html.dark .visual-globe .visual-content .visual-caption svg {
+  color: #f0d991 !important;
+}
+html:not(.dark) .visual-globe::after,
+html.dark .visual-globe::after {
+  background: linear-gradient(90deg, rgba(8,8,7,.9) 0%, rgba(8,8,7,.72) 54%, rgba(8,8,7,.26) 100%);
+}
+
+
+/* Production contrast guard for the globe editorial copy. */
+.visual-globe .visual-content {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  color: #fffaf0 !important;
+  text-shadow: 0 2px 18px rgba(0,0,0,.9) !important;
+}
+.visual-globe .visual-content::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -24px -28px;
+  border-radius: 2px;
+  background: rgba(4,4,3,.48);
+  box-shadow: 0 18px 44px rgba(0,0,0,.18);
+  pointer-events: none;
+}
+.visual-globe .visual-content h3,
+.visual-globe .visual-content h3 em,
+.visual-globe .visual-content > p,
+.visual-globe .visual-content .visual-caption,
+.visual-globe .visual-content .visual-caption svg {
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  text-shadow: 0 2px 14px rgba(0,0,0,.88) !important;
+}
+.visual-globe .visual-content h3,
+.visual-globe .visual-content > p,
+.visual-globe .visual-content .visual-caption {
+  color: #fffaf0 !important;
+  -webkit-text-fill-color: #fffaf0 !important;
+}
+.visual-globe .visual-content h3 em,
+.visual-globe .visual-content .service-eyebrow,
+.visual-globe .visual-content .visual-caption svg {
+  color: #f0d991 !important;
+  -webkit-text-fill-color: #f0d991 !important;
 }
