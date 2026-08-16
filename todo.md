@@ -234,3 +234,7 @@
 - [x] Diagnostiquer l’erreur de chargement dynamique du chunk Contact en production.
 - [x] Corriger la stratégie de chargement/cache des chunks Vite et prévoir un fallback de récupération de version.
 - [x] Valider la navigation Contact, le build, les artefacts et le déploiement de production.
+
+- [x] Synchroniser `client/src/components/GlobeO.tsx` dans le dépôt GitHub pour supprimer l’ENOENT Vercel.
+- [x] Rendre le script analytics Vite conditionnel et compatible avec des variables absentes.
+- [x] Valider le build depuis un clone propre, pousser le correctif sur `main` et vérifier le commit.

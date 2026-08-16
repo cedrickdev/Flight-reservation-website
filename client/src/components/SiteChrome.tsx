@@ -1,7 +1,7 @@
 /** The header and footer form a dependable ink-and-gold frame around every route. */
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
-import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
+import { ArrowUpRight, Facebook, Instagram, Linkedin, Menu, MessageCircle, Moon, Music2, Sun, X } from "lucide-react";
 import { assets, contact, ui } from "@/lib/content";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -58,8 +58,15 @@ export function Header() {
   );
 }
 
+export function WhatsAppFloat() {
+  const { language } = useLanguage();
+  return <a className="whatsapp-float" href={`https://wa.me/${contact.phones[0].wa}`} target="_blank" rel="noreferrer" aria-label={language === "fr" ? "Écrire sur WhatsApp" : "Write on WhatsApp"}><MessageCircle size={21} aria-hidden="true" /><span>WhatsApp</span></a>;
+}
+
+const socialIcons = { Instagram, Facebook, Linkedin, TikTok: Music2 };
+
 export function Footer() {
   const { language } = useLanguage();
   const copy = ui[language];
-  return <footer className="site-footer"><div className="footer-grid"><div className="footer-brand"><img src={assets.logo} alt="Trust Elite Travel" width="104" height="104" loading="lazy" /><p>{copy.footer}</p></div><div className="footer-contact"><span className="footer-label">{language === "fr" ? "Point de départ" : "Starting point"}</span><strong>{contact.city[language]}</strong><a href={`https://wa.me/${contact.phones[0].wa}`} target="_blank" rel="noreferrer">{contact.phones[0].display}</a><a href={`https://wa.me/${contact.phones[1].wa}`} target="_blank" rel="noreferrer">{contact.phones[1].display}</a></div><div className="footer-contact"><span className="footer-label">{language === "fr" ? "Nous écrire" : "Write to us"}</span><a href={`mailto:${contact.email}`}>{contact.email}</a><Link href="/contact" className="footer-link">{copy.request}<ArrowUpRight size={16} aria-hidden="true" /></Link></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Trust Elite Travel</span><span>{copy.legal}</span></div></footer>;
+  return <footer className="site-footer"><div className="footer-grid"><div className="footer-brand"><img src={assets.logo} alt="Trust Elite Travel" width="104" height="104" loading="lazy" /><p>{copy.footer}</p></div><div className="footer-contact"><span className="footer-label">{language === "fr" ? "Point de départ" : "Starting point"}</span><strong>{contact.city[language]}</strong><a href={`https://wa.me/${contact.phones[0].wa}`} target="_blank" rel="noreferrer">{contact.phones[0].display}</a><a href={`https://wa.me/${contact.phones[1].wa}`} target="_blank" rel="noreferrer">{contact.phones[1].display}</a></div><div className="footer-contact"><span className="footer-label">{language === "fr" ? "Nous écrire" : "Write to us"}</span><a href={`mailto:${contact.email}`}>{contact.email}</a><Link href="/contact" className="footer-link">{copy.request}<ArrowUpRight size={16} aria-hidden="true" /></Link><div className="footer-socials" aria-label={language === "fr" ? "Réseaux sociaux" : "Social networks"}><a className="footer-social-pending footer-social-link" href="https://www.instagram.com/trust_elite_travel/" target="_blank" rel="noreferrer" title="Instagram"><Instagram size={15} aria-hidden="true" /><span className="sr-only">Instagram</span></a><a className="footer-social-pending footer-social-link" href="https://www.tiktok.com/@trust.elite.trave" target="_blank" rel="noreferrer" title="TikTok"><Music2 size={15} aria-hidden="true" /><span className="sr-only">TikTok</span></a><span className="footer-social-pending" title={language === "fr" ? "Facebook — lien à confirmer" : "Facebook — link to be confirmed"}><Facebook size={15} aria-hidden="true" /><span className="sr-only">Facebook</span></span><span className="footer-social-pending" title={language === "fr" ? "LinkedIn — lien à confirmer" : "LinkedIn — link to be confirmed"}><Linkedin size={15} aria-hidden="true" /><span className="sr-only">LinkedIn</span></span></div></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Trust Elite Travel</span><span>{copy.legal}</span></div></footer>;
 }
