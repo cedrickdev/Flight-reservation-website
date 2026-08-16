@@ -238,3 +238,15 @@
 - [x] Synchroniser `client/src/components/GlobeO.tsx` dans le dépôt GitHub pour supprimer l’ENOENT Vercel.
 - [x] Rendre le script analytics Vite conditionnel et compatible avec des variables absentes.
 - [x] Valider le build depuis un clone propre, pousser le correctif sur `main` et vérifier le commit.
+
+- [x] Retirer le bouton WhatsApp flottant du site tout en conservant les actions de contact dans la section dédiée.
+- [x] Réduire la largeur et l’occupation visuelle du formulaire Contact sur desktop et mobile.
+- [x] Revalider le responsive Contact, les thèmes, les tests et le build après la simplification.
+
+- [x] Rendre le message essentiel visible en thème clair et en thème sombre.
+- [x] Retirer la mention d’adresse et de contact superflue du footer.
+- [x] Revalider les deux thèmes, le footer, les tests et le build.
+
+- [x] Ajouter un message de succès bilingue après soumission réussie du formulaire.
+- [x] Ajouter une animation de confirmation visuelle sobre et compatible avec reduced-motion.
+- [x] Revalider le flux de soumission, les thèmes, le responsive, les tests et le build.

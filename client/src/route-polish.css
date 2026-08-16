@@ -1332,3 +1332,118 @@ html.dark .contact-area .request-stepper .stepper-actions .button-primary:disabl
     line-height: 1.46;
   }
 }
+
+
+/* Contact simplification: a centered, quieter form surface instead of an oversized full-width panel. */
+.contact-area .contact-grid {
+  width: min(100%, 1120px);
+  margin-inline: auto;
+  grid-template-columns: minmax(0, 760px) minmax(230px, 320px);
+  gap: clamp(32px, 5vw, 72px);
+  justify-content: center;
+}
+.contact-area .request-stepper {
+  width: 100%;
+  max-width: 760px;
+  padding: clamp(28px, 3vw, 38px);
+}
+.contact-area .contact-aside {
+  width: 100%;
+  max-width: 320px;
+}
+@media (max-width:1080px) {
+  .contact-area .contact-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, .48fr);
+    gap: 36px;
+  }
+}
+@media (max-width:760px) {
+  .contact-area .contact-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .contact-area .request-stepper,
+  .contact-area .contact-aside {
+    max-width: none;
+  }
+  .contact-area .request-stepper {
+    padding: 25px 18px;
+  }
+}
+
+
+/* FAQ heading contrast: keep the essential answer title visible in both themes. */
+html:not(.dark) .faq-section .section-heading h2 { color: #11110f; }
+html.dark .faq-section .section-heading h2 { color: #f6f2ea; }
+
+
+/* Submission confirmation: restrained motion with an accessible reduced-motion fallback. */
+.form-complete {
+  animation: confirmation-panel-in .42s var(--ease-out) both;
+}
+.form-complete .complete-icon {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  animation: confirmation-icon-in .5s var(--ease-out) .08s both;
+}
+.form-complete .complete-icon svg {
+  position: relative;
+  z-index: 2;
+  stroke-width: 2.4;
+  animation: confirmation-check-draw .48s var(--ease-out) .24s both;
+}
+.complete-icon-pulse {
+  position: absolute;
+  inset: -8px;
+  z-index: -1;
+  border: 1px solid color-mix(in srgb, var(--gold) 68%, transparent);
+  border-radius: 50%;
+  opacity: 0;
+  animation: confirmation-pulse 1.4s var(--ease-out) .28s both;
+}
+.confirmation-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px !important;
+  color: var(--gold) !important;
+  font-size: 12px !important;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+.confirmation-note::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--gold);
+}
+@keyframes confirmation-panel-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes confirmation-icon-in {
+  from { opacity: 0; transform: scale(.82); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes confirmation-check-draw {
+  from { opacity: 0; transform: scale(.72) rotate(-10deg); }
+  to { opacity: 1; transform: scale(1) rotate(0); }
+}
+@keyframes confirmation-pulse {
+  0% { opacity: 0; transform: scale(.72); }
+  24% { opacity: .8; }
+  100% { opacity: 0; transform: scale(1.3); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .form-complete,
+  .form-complete .complete-icon,
+  .form-complete .complete-icon svg,
+  .complete-icon-pulse {
+    animation: none;
+  }
+  .complete-icon-pulse { opacity: .35; transform: none; }
+}
