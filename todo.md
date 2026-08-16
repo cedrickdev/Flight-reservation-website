@@ -167,3 +167,62 @@
 - [x] Revalider le hero desktop/mobile, les thèmes, les tests et le build : captures 390px et 1280px validées, globe centré, contenu mobile lisible, Vitest 7/7, TypeScript et build validés.
 - [x] Décaler le globe vers la droite et vers le bas pour le centrer entre le « t » et le « i » de « trajectoire ».
 - [x] Revalider le rendu desktop/mobile, les tests et le build après ce réglage : captures 390px et 1280px validées, Vitest 7/7, TypeScript et build validés.
+
+# Checklist complète — amélioration Trust Elite Travel
+
+- [x] 01 — Accueil : mettre davantage en avant le slogan « Voyagez autrement, en toute confiance ».
+- [x] 01 — Accueil : ajouter une phrase d’activité claire couvrant billetterie, voyages, hôtels, assistance visa, assurance et conciergerie.
+- [x] 01 — Accueil : proposer des CTA visibles « Réserver un billet », « Demander un devis » et « Nous contacter ».
+- [x] 02 — Premium : renforcer la direction artistique blanc, jaune et noir avec davantage d’espace, d’images et moins de texte superflu.
+- [x] 03 — Services : présenter les sept services demandés avec descriptions courtes, professionnelles et lisibles.
+- [x] 04 — À propos : raconter l’existence, la vision, la différence et l’expérience promise par Trust Elite Travel.
+- [x] 05 — Confiance : ajouter une section « Pourquoi choisir Trust Elite Travel ? » avec les cinq engagements demandés.
+- [x] 06 — WhatsApp : ajouter un bouton WhatsApp fixe, visible, accessible et correctement relié au +237 655 44 93 35.
+- [x] 07 — Devis : compléter le formulaire avec nom, WhatsApp, destination, dates, voyageurs, service et bouton « Envoyer ma demande », transmis dans la demande e-mail existante.
+- [x] 08 — FAQ : ajouter les six questions fréquentes demandées avec réponses bilingues et accordéon accessible.
+- [x] 09 — Témoignages : préparer un emplacement administrable sans publier de témoignages, notes ou avis inventés.
+- [x] 10 — Coordonnées : rendre visibles adresse, téléphone/WhatsApp, e-mail et carte de localisation ; réseaux affichés en attente de leurs URLs officielles.
+- [x] 11 — Réseaux sociaux : Instagram et TikTok activés avec les URLs fournies ; Facebook et LinkedIn restent en attente d’URLs officielles.
+- [x] 12 — Mobile : vérifier chaque page, menu, CTA et bouton fixe sur petits écrans ; captures accueil/À propos/Contact en 390 px validées.
+- [x] 13 — SEO local : renforcer title, description, données structurées TravelAgency, contenu local et requêtes agence de voyage Douala/Cameroun.
+- [x] 14 — Équipe : zone photo préparée dans À propos ; intégration de la vraie photo reportée à la prochaine fourniture d’asset par l’agence.
+- [x] Checklist : URLs Instagram/TikTok reçues et activées ; photo équipe/fondatrice et témoignages authentifiés documentés comme contenus à fournir ultérieurement, sans fabrication.
+
+- [x] Retirer « Demander un devis » du hero et conserver « Réserver un billet » comme CTA principal.
+- [x] En mode clair, transformer les boutons à fond noir en boutons dorés avec texte noir.
+- [x] Rendre le texte de la colonne Contact lisible en mode clair avec une couleur sombre explicite.
+- [x] Arrondir la carte de localisation et ses limites visuelles.
+- [x] Remplacer les libellés des sept services par la nouvelle nomenclature fournie.
+- [x] Activer les liens Instagram et TikTok officiels dans le footer, puis revalider desktop/mobile, thèmes, tests et build : Vitest 7/7, TypeScript, build et captures mobile validés.
+
+- [x] Remplacer les descriptions longues des sept services par des formulations courtes, professionnelles et bilingues.
+- [x] Revalider les cartes, la page Services, le responsive, les tests et le build après cette simplification : captures desktop validées, Vitest 7/7, TypeScript et build validés.
+
+- [x] Renforcer la rubrique À propos avec l’histoire, la vision, les différenciateurs et l’expérience client promise par Trust Elite Travel.
+- [x] Revalider la page À propos en français/anglais, sur desktop/mobile, dans les deux thèmes, puis valider tests et build : capture mobile validée, Vitest 7/7, TypeScript et build réussis.
+
+- [x] Corriger en mode clair la visibilité complète de la colonne Contact : titre, coordonnées, icônes, séparateurs et lien d’itinéraire.
+- [x] Revalider Contact en clair/sombre, desktop/mobile, tests et build après la correction : capture pleine page claire validée, Vitest 7/7, TypeScript et build réussis.
+
+- [x] Garantir une palette explicite et lisible pour toute la colonne Contact en mode clair et en mode sombre.
+- [x] Revalider les deux thèmes, desktop/mobile, tests et build après la correction complète : palette claire et sombre explicites, capture pleine page claire, Vitest 7/7, TypeScript et build validés.
+
+- [x] Retirer le contour et le rayon extérieur de la colonne Contact, en conservant uniquement les séparateurs internes utiles.
+- [x] Revalider les deux thèmes, desktop/mobile, tests et build après la nouvelle composition : capture mobile validée, Vitest 7/7, TypeScript et build réussis.
+
+- [x] En mode sombre, afficher le formulaire Contact sur une carte claire à gauche et la colonne de coordonnées sur un fond noir à droite, sans contour extérieur.
+- [x] Revalider la composition Contact clair/sombre, desktop/mobile, tests et build : règles sombre explicites pour formulaire clair et colonne noire, Vitest 7/7, TypeScript et build validés.
+
+- [x] Corriger la lisibilité du stepper clair affiché en mode sombre : titres, descriptions, choix de services, étapes, bordures et bouton Continuer.
+- [x] Revalider le stepper dans les deux thèmes, desktop/mobile, tests et build : palette sombre explicite ajoutée au formulaire clair, Vitest 7/7, TypeScript et build validés.
+
+- [x] Positionner l’animation de l’avion directement sur ou au plus près de « Voyagez autrement, en toute confiance. » dans le hero.
+- [x] Revalider le placement du hero sur desktop/mobile, les thèmes, les tests et le build : avion attaché au slogan, captures 1280px et 390px validées, Vitest 7/7, TypeScript et build réussis.
+
+- [x] Retirer complètement FlightScene et ses styles du hero, en conservant le globe dans « trajectoire ».
+- [x] Renforcer la mise en avant du slogan « Voyagez autrement, en toute confiance » en français et en anglais.
+- [x] Approfondir le SEO local pour les requêtes agence de voyage Douala, agence de voyage Cameroun, billet d’avion Douala et assistance visa Cameroun : métadonnées naturelles, données structurées TravelAgency, services structurés, profils sociaux et documentation SEO_NOTES.md.
+- [x] Revalider hero, SEO, desktop/mobile, thèmes, tests et build après cette passe : captures 1280px/390px, Vitest 7/7, TypeScript et build validés.
+
+- [x] Vérifier que le globe, le hero et les autres assets multimédias utilisent des références compatibles avec la production Vercel : URLs publiques absolues, redirections suivies, 7 assets vérifiés HTTP 200 avec MIME PNG/WebP.
+- [x] Valider le build et le rendu des assets en production, puis créer le commit et pousser sur `main` avec l’auteur `cedrick dev`.
