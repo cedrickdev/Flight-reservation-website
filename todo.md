@@ -267,6 +267,26 @@
 - [x] Neutraliser opacity, mix-blend-mode et text-fill-color hérités, puis ajouter une surface de lecture stable.
 - [x] Valider le rendu comparatif, les thèmes, les tests et le build.
 
-- [ ] Consigner et diagnostiquer l’écart entre le bloc globe local et le rendu sombre observé en production.
-- [ ] Corriger la cause effective du texte sombre, pas seulement ajouter un nouvel override redondant.
-- [ ] Vérifier visuellement le bloc exact en production avant toute annonce de résolution.
+- [x] Consigner et diagnostiquer l’écart entre le bloc globe local et le rendu sombre observé en production.
+- [x] Corriger la cause effective du texte sombre, pas seulement ajouter un nouvel override redondant.
+- [x] Vérifier visuellement le bloc exact en production avant toute annonce de résolution.
+
+- [x] Remplacer l’image de la section « 360 — Un service, plusieurs points de passage » par la photo fournie.
+- [x] Préserver l’original et servir une version web moderne sans perte perceptible de qualité.
+- [x] Vérifier le cadrage desktop/mobile, les tests et le build.
+
+- [x] Diagnostiquer pourquoi la photo de la section 360 apparaît cassée en production.
+- [x] Corriger l’URL, le chemin de stockage ou la synchronisation du bundle selon la cause confirmée.
+- [x] Valider le chargement réel de l’image, le responsive, les tests et le build.
+
+- [x] Afficher la photo originale entière sans rognage, en agrandissant la zone image si nécessaire.
+- [x] Retirer le badge « Chaque demande commence par un cap clair. ».
+- [x] Revalider le cadrage desktop/mobile, les tests et le build.
+
+- [x] Arrondir les angles de la photo de la section 360.
+- [x] Aligner le côté gauche de la photo directement avec le bord de la page.
+- [x] Revalider le ratio original, le responsive, les tests et le build.
+
+- [ ] Diagnostiquer pourquoi la photo portrait reste rognée sur le domaine publié.
+- [ ] Supprimer toute contrainte de cadrage ou de hauteur fixe encore appliquée en production.
+- [ ] Vérifier directement le domaine publié, le responsive, les tests et le build.

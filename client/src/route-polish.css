@@ -1551,3 +1551,46 @@ html.dark .visual-globe::after {
   color: #f0d991 !important;
   -webkit-text-fill-color: #f0d991 !important;
 }
+
+
+/* Preserve the supplied office photo in its original portrait ratio. */
+.image-statement-photo {
+  height: auto !important;
+  min-height: 0 !important;
+  background: var(--paper);
+  overflow: hidden;
+}
+.image-statement-photo > img {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: 1122 / 1402;
+  object-fit: contain !important;
+  object-position: center;
+}
+@media (max-width: 760px) {
+  .image-statement-photo {
+    height: auto !important;
+  }
+  .image-statement-photo > img {
+    width: 100%;
+    height: auto !important;
+  }
+}
+
+
+/* Full-bleed left edge for the original portrait photo, with rounded inner corners. */
+.image-statement-photo {
+  margin-left: calc((100vw - 100%) / -2);
+  border-radius: 0 30px 30px 0;
+}
+.image-statement-photo > img {
+  border-radius: inherit;
+}
+@media (max-width: 760px) {
+  .image-statement-photo {
+    margin-left: calc((100vw - 100%) / -2);
+    border-radius: 0 22px 22px 0;
+  }
+}
