@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://trust-elite-travels.com/sitemap.xml

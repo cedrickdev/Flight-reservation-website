@@ -2,6 +2,15 @@
 
 Cette passe suit les recommandations officielles de Google : utiliser un contenu utile et lisible, des titres et descriptions descriptifs, des URLs claires, des données structurées LocalBusiness cohérentes avec le contenu visible, un sitemap et une fiche Google Business Profile complète et vérifiée. Google précise qu’aucune modification ne garantit une position donnée et que les résultats locaux dépendent notamment de la pertinence, de la distance et de la notoriété.
 
+## Implémentation
+
+- métadonnées globales et propres à chaque route via l’API Metadata de Next.js ;
+- canonicals, Open Graph, Twitter Cards et aperçu social local ;
+- schéma `TravelAgency` avec adresse, téléphone et réseaux confirmés ;
+- sitemap incluant toutes les fiches services ;
+- `robots.txt` et manifeste générés par Next.js ;
+- HTML pré-rendu pour toutes les pages publiques.
+
 ## Requêtes prioritaires
 
 - agence de voyage Douala

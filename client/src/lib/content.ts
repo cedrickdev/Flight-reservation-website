@@ -5,8 +5,28 @@ export const tr = (value: Localized, language: Language) => value[language];
 export type ServiceSlug = "visa" | "billets" | "hotels" | "packages" | "assurance" | "conciergerie" | "coaching";
 export type TravelService = { slug: ServiceSlug; number: string; name: Localized; eyebrow: Localized; summary: Localized; longDescription: Localized; deliverables: Localized[]; image?: string };
 
-export const assets = { logo: "https://trusttravel-x42xvjah.manus.space/manus-storage/trust-elite-official-logo-clean_e147d9e4.png", mark: "https://trusttravel-x42xvjah.manus.space/manus-storage/trust-elite-mark_6497b569.png", hero: "https://trusttravel-x42xvjah.manus.space/manus-storage/trust-elite-hero_94b5c17b.webp", visa: "https://trusttravel-x42xvjah.manus.space/manus-storage/trust-elite-visa_9d69f84b.webp", hotel: "https://trusttravel-x42xvjah.manus.space/manus-storage/trust-elite-hotel_4af6cb81.webp", coaching: "https://trusttravel-x42xvjah.manus.space/manus-storage/trust-elite-coaching_6f058e5e.webp", globe: "https://trusttravel-x42xvjah.manus.space/manus-storage/trust-elite-globe_64cbc911.webp", wing: "https://trusttravel-x42xvjah.manus.space/manus-storage/trust-elite-wing_7d090577.webp", flightRoute: "https://trusttravel-x42xvjah.manus.space/manus-storage/trust-elite-flight-route_8b65fee6.webp", douala: "https://trusttravel-x42vjah.manus.space/manus-storage/trust-elite-douala_8d2b4c8c.webp", office: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663338566390/hTTrmcODiRVLqlTw.png" };
+/** Local-first assets — replace files in client/public/assets/ to update the site. No external bucket required. */
+export const assets = {
+  logoOnLight: "/assets/logo-on-light.png",
+  logoOnDark: "/assets/logo-on-dark.png",
+  logoOnGold: "/assets/logo-on-gold.png",
+  hero: "/assets/hero.webp",
+  visa: "/assets/visa.webp",
+  hotel: "/assets/hotel.webp",
+  coaching: "/assets/coaching.webp",
+  globe: "/assets/globe.webp",
+  wing: "/assets/wing.webp",
+  flightRoute: "/assets/flight-route.webp",
+  douala: "/assets/douala.webp",
+  office: "/assets/office.webp",
+  faq: "/assets/faq.webp",
+} as const;
 export const contact = { email: "contact@trustelitetravels.com", phones: [{ display: "+237 655 44 93 35", wa: "237655449335" }, { display: "+237 654 99 77 30", wa: "237654997730" }], city: { fr: "Douala–Makepe, face CNPS", en: "Douala–Makepe, opposite CNPS" } satisfies Localized };
+export const whatsappIntro = {
+  fr: "Bonjour Trust Elite Travel, je souhaite obtenir des informations pour préparer mon voyage. Pouvez-vous m’accompagner, s’il vous plaît ?",
+  en: "Hello Trust Elite Travel, I would like some information to prepare my trip. Could you please assist me?",
+} satisfies Localized;
+export const whatsappHref = (phone: string, language: Language) => `https://wa.me/${phone}?text=${encodeURIComponent(whatsappIntro[language])}`;
 
 export const services: TravelService[] = [
   { slug:"billets", number:"01", name:{fr:"Billetterie aérienne",en:"Air ticketing"}, eyebrow:{fr:"National & international",en:"National & international"}, summary:{fr:"Des billets adaptés à votre destination et à votre calendrier.",en:"Tickets tailored to your destination and schedule."}, longDescription:{fr:"Nous vous aidons à organiser votre transport et à choisir un itinéraire cohérent avec votre calendrier et votre projet.",en:"We help organize your transport and select a route that suits your schedule and travel plan."}, deliverables:[{fr:"Recherche d’itinéraires",en:"Route search"},{fr:"Comparaison des options",en:"Options comparison"},{fr:"Préparation au départ",en:"Departure preparation"}] },
