@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
 import type { ReactNode } from "react";
+import { socialLinks } from "@/lib/content";
 import { Providers } from "./providers";
 import "@/index.css";
 import "@/route-polish.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.trustelitetravels.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://trustelitetravels.com";
 const description = "Agence de voyage à Douala pour vos billets d’avion, réservations d’hôtels, séjours, assistance visa, assurance voyage et conciergerie.";
 
 export const metadata: Metadata = {
@@ -47,16 +47,13 @@ const organizationSchema = {
   telephone: "+237655449335",
   address: { "@type": "PostalAddress", streetAddress: "Makepe, face CNPS", addressLocality: "Douala", addressCountry: "CM" },
   areaServed: { "@type": "Country", name: "Cameroon" },
-  sameAs: ["https://www.instagram.com/trust_elite_travel/", "https://www.tiktok.com/@trust.elite.trave"],
+  sameAs: Object.values(socialLinks),
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="fr" className="dark" suppressHydrationWarning>
       <head>
-        <Script id="theme-init" strategy="beforeInteractive">
-          {`try{var t=localStorage.getItem("theme")||"dark";document.documentElement.classList.toggle("dark",t==="dark")}catch(e){document.documentElement.classList.add("dark")}`}
-        </Script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />

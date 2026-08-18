@@ -21,6 +21,14 @@ export function TikTokBrandIcon({ size = 20, className }: BrandIconProps) {
   );
 }
 
+export function FacebookBrandIcon({ size = 20, className }: BrandIconProps) {
+  return (
+    <svg className={className} width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M13.72 21v-8.2h2.75l.41-3.2h-3.16V7.56c0-.93.26-1.56 1.59-1.56H17V3.15c-.29-.04-1.29-.15-2.45-.15-2.43 0-4.09 1.48-4.09 4.2v2.4H7.72v3.2h2.74V21h3.26Z" />
+    </svg>
+  );
+}
+
 export function WhatsAppBrandIcon({ size = 21, className }: BrandIconProps) {
   return (
     <svg className={className} width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">

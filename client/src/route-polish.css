@@ -2106,3 +2106,488 @@ dd,
     line-height: 1.62;
   }
 }
+
+/* Keep the globe inside one indivisible word at every mobile width. */
+.hero-trajectory-word {
+  display: inline-block;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+/* Light mode keeps the form editorially pale while inputs become a clear ink surface. */
+html:not(.dark) .contact-area .request-stepper .step-panel input:not([type="radio"]),
+html:not(.dark) .contact-area .request-stepper .step-panel textarea {
+  color-scheme: dark;
+  color: #fffaf0;
+  background: #171613;
+  border-color: #4e4a42;
+  caret-color: #f0d991;
+}
+
+html:not(.dark) .contact-area .request-stepper .step-panel input:not([type="radio"])::placeholder,
+html:not(.dark) .contact-area .request-stepper .step-panel textarea::placeholder {
+  color: #c9c1b5;
+  opacity: 1;
+}
+
+html:not(.dark) .contact-area .request-stepper .step-panel input:not([type="radio"]):focus,
+html:not(.dark) .contact-area .request-stepper .step-panel textarea:focus {
+  color: #fffaf0;
+  background: #11110f;
+  border-color: #d7b84f;
+  box-shadow: 0 0 0 3px rgba(184, 145, 47, 0.2);
+}
+
+.step-validation-error,
+.form-submit-error {
+  margin: 16px 0 0;
+  color: #9f3428;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.form-submit-error {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(159, 52, 40, 0.34);
+  border-radius: 12px;
+  background: rgba(159, 52, 40, 0.08);
+}
+
+.form-submit-error a {
+  display: inline-flex;
+  margin-top: 8px;
+  border-bottom: 1px solid currentColor;
+}
+
+.submission-reference {
+  margin-top: 14px !important;
+  color: var(--gold) !important;
+  font-size: 0.75rem !important;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.request-stepper {
+  scroll-margin-top: 88px;
+}
+
+/* Adaptive request fields: each service keeps a compact, scannable questionnaire. */
+.step-panel--adaptive { min-height:0; }
+.adaptive-field-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:2px 20px; }
+.adaptive-field { min-width:0; }
+.adaptive-field--wide { grid-column:1 / -1; }
+.field-optional { color:inherit; font-size:.9em; font-weight:500; letter-spacing:0; text-transform:none; opacity:.7; }
+
+.step-panel select {
+  width:100%;
+  min-height:46px;
+  padding:11px 34px 11px 12px;
+  color:var(--ink);
+  border:1px solid #bdb5a7;
+  border-radius:10px;
+  outline:0;
+  background-color:transparent;
+  font:inherit;
+  font-size:16px;
+  transition:border-color .2s var(--ease-out),background-color .2s var(--ease-out),box-shadow .2s var(--ease-out);
+}
+.step-panel select:focus { border-color:var(--gold); background:rgba(184,145,47,.05); box-shadow:0 0 0 3px rgba(184,145,47,.12); }
+
+html:not(.dark) .contact-area .request-stepper .step-panel select {
+  color-scheme:dark;
+  color:#fffaf0;
+  background-color:#171613;
+  border-color:#4e4a42;
+}
+html:not(.dark) .contact-area .request-stepper .step-panel select:focus {
+  background-color:#11110f;
+  border-color:#d7b84f;
+  box-shadow:0 0 0 3px rgba(184,145,47,.2);
+}
+html.dark .contact-area .request-stepper .step-panel select {
+  color-scheme:light;
+  color:#171613;
+  background-color:#faf7ef;
+  border-color:#827a6b;
+}
+html.dark .contact-area .request-stepper .step-panel select:focus {
+  background-color:#fffdfa;
+  border-color:#a17a1a;
+  box-shadow:0 0 0 3px rgba(161,122,26,.14);
+}
+
+.confirm-panel dl div { grid-template-columns:minmax(120px,34%) 1fr; gap:16px; }
+.confirm-panel dd { overflow-wrap:anywhere; white-space:pre-line; }
+
+@media (max-width:760px) {
+  .adaptive-field-grid { grid-template-columns:1fr; gap:0; }
+  .adaptive-field--wide { grid-column:auto; }
+  .confirm-panel dl div { grid-template-columns:minmax(92px,34%) 1fr; gap:11px; }
+}
+
+/* The form is always an ivory working surface: controls stay light with ink-black text. */
+.contact-area .request-stepper .step-panel input:not([type="radio"]),
+.contact-area .request-stepper .step-panel textarea,
+.contact-area .request-stepper .step-panel select {
+  color-scheme:light !important;
+  color:#171613 !important;
+  -webkit-text-fill-color:#171613;
+  background-color:#fffdfa !important;
+  border-color:#b9b1a3 !important;
+  caret-color:#171613;
+}
+
+.contact-area .request-stepper .step-panel input:not([type="radio"])::placeholder,
+.contact-area .request-stepper .step-panel textarea::placeholder {
+  color:#716b61 !important;
+  -webkit-text-fill-color:#716b61;
+  opacity:1;
+}
+
+.contact-area .request-stepper .step-panel input:not([type="radio"]):focus,
+.contact-area .request-stepper .step-panel textarea:focus,
+.contact-area .request-stepper .step-panel select:focus {
+  color:#171613 !important;
+  background-color:#fffdfa !important;
+  border-color:#9b7621 !important;
+  box-shadow:0 0 0 3px rgba(155,118,33,.16) !important;
+}
+
+.contact-area .request-stepper .step-panel input:-webkit-autofill,
+.contact-area .request-stepper .step-panel input:-webkit-autofill:hover,
+.contact-area .request-stepper .step-panel input:-webkit-autofill:focus {
+  -webkit-text-fill-color:#171613 !important;
+  box-shadow:0 0 0 1000px #fffdfa inset !important;
+}
+
+.contact-area .request-stepper .step-panel select option {
+  color:#171613;
+  background:#fffdfa;
+}
+
+.step-panel legend:focus { outline:none; }
+.step-panel legend:focus-visible {
+  outline:2px solid #9b7621;
+  outline-offset:6px;
+}
+
+.contact-area .request-stepper [aria-invalid="true"]:not([type="radio"]) {
+  border-color:#a13b2f !important;
+  box-shadow:0 0 0 3px rgba(161,59,47,.14) !important;
+}
+
+/* The action area stays open and quiet; the progress rail already provides structure. */
+.request-stepper .stepper-actions {
+  border-top:0;
+}
+
+/* Preserve the supplied 3:4 portrait while keeping the existing offset-gold frame. */
+.principles-image {
+  width:100%;
+  height:auto !important;
+  max-height:680px;
+  aspect-ratio:3 / 4;
+}
+
+.principles-image img {
+  border-radius:14px;
+  object-fit:cover;
+  object-position:center;
+}
+
+.principles-image::after {
+  border-radius:14px;
+}
+
+@media (max-width:760px) {
+  .principles-image {
+    height:auto !important;
+    max-height:none;
+    aspect-ratio:3 / 4;
+  }
+}
+
+/* Compact site chrome while preserving accessible 44px interaction targets. */
+.site-header {
+  height:64px;
+}
+
+.site-header .brand-lockup {
+  width:64px;
+  height:64px;
+}
+
+.brand-mark-official--header {
+  width:46px;
+  height:50px;
+}
+
+.site-header .nav-link {
+  padding:21px 0;
+}
+
+.site-header .nav-link::after {
+  bottom:15px;
+}
+
+.about-team-section {
+  grid-template-columns:minmax(280px,.68fr) minmax(0,1.32fr);
+  gap:7vw;
+}
+
+.team-photo-placeholder {
+  width:min(100%,380px);
+  min-height:300px;
+  justify-self:start;
+  padding:28px;
+}
+
+.team-photo-placeholder strong {
+  font-size:24px;
+}
+
+@media (max-width:760px) {
+  .site-header {
+    height:60px;
+  }
+
+  .site-header .brand-lockup {
+    width:48px;
+    height:60px;
+  }
+
+  .brand-mark-official--header {
+    width:40px;
+    height:44px;
+  }
+
+  .mobile-menu {
+    padding-top:calc(76px + env(safe-area-inset-top));
+    padding-bottom:calc(62px + env(safe-area-inset-bottom));
+  }
+
+  .about-team-section {
+    grid-template-columns:1fr;
+  }
+
+  .team-photo-placeholder {
+    width:min(100%,340px);
+    min-height:240px;
+    justify-self:center;
+    padding:24px;
+  }
+}
+
+/* Final mobile hero composition: reveal the subject and keep every word intact. */
+.hero-heading-line {
+  hyphens:none;
+  overflow-wrap:normal;
+  word-break:normal;
+}
+
+@media (max-width:760px) {
+  .hero-image {
+    object-position:71% center;
+  }
+
+  .hero-content {
+    width:calc(100% - 28px);
+    margin-right:14px;
+    margin-bottom:clamp(155px,20vh,180px);
+    margin-left:14px;
+  }
+
+  .hero-content h1 {
+    width:min(100%,19.5rem);
+    max-width:none;
+    font-size:clamp(2.5rem,11vw,3.3rem);
+    line-height:.9;
+    overflow:visible;
+    text-wrap:wrap;
+  }
+
+  .hero-heading-line {
+    display:block;
+    width:fit-content;
+    max-width:100%;
+  }
+
+  .hero-heading-accent {
+    white-space:nowrap;
+  }
+
+  .hero-content h1 > br {
+    display:none;
+  }
+
+  .hero-globe-letter {
+    width:.76em;
+    height:.76em;
+    margin-inline:.01em;
+    vertical-align:-.045em;
+  }
+
+  .hero-globe-letter > .hero-globe-inline {
+    transform:translate(1px,1px);
+  }
+
+  .hero-content > p {
+    width:min(78vw,19rem);
+    max-width:none;
+  }
+}
+
+@media (max-width:340px) {
+  .hero-content {
+    margin-bottom:clamp(148px,19vh,168px);
+  }
+
+  .hero-content h1 {
+    font-size:clamp(2.38rem,12.8vw,2.72rem);
+  }
+}
+
+/* The mobile navigation follows the selected theme instead of forcing an ink panel. */
+@media (max-width:760px) {
+  html:not(.dark) .site-header.menu-is-open {
+    color:#11110f !important;
+    background:#f6f2ea;
+    border-color:rgba(17,17,15,.14);
+  }
+
+  html:not(.dark) .site-header.menu-is-open .theme-control,
+  html:not(.dark) .site-header.menu-is-open .language-control,
+  html:not(.dark) .site-header.menu-is-open .menu-toggle {
+    color:#765b18 !important;
+  }
+
+  html:not(.dark) .mobile-menu {
+    color:#11110f;
+    background:#f6f2ea;
+  }
+
+  html:not(.dark) .mobile-nav-link {
+    color:#11110f;
+    border-color:rgba(17,17,15,.16);
+  }
+
+  html:not(.dark) .mobile-nav-link:hover,
+  html:not(.dark) .mobile-nav-link:focus-visible,
+  html:not(.dark) .mobile-nav-link.active {
+    color:#11110f;
+    background:rgba(184,145,47,.13);
+  }
+
+  html:not(.dark) .mobile-menu .mobile-menu-footer {
+    color:#575248;
+  }
+
+  html:not(.dark) .mobile-menu .mobile-menu-footer a {
+    color:#765b18;
+  }
+
+  .mobile-menu-footer-actions {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    width:100%;
+  }
+
+  .mobile-menu .mobile-menu-footer {
+    align-items:flex-start;
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .mobile-menu-socials {
+    gap:8px;
+    margin:0;
+  }
+
+  .mobile-menu-socials .footer-social-link {
+    color:inherit;
+  }
+}
+
+/* About promise: explicit theme contrast and softly finished cards. */
+.differentiator-card {
+  border-radius:14px;
+  overflow:hidden;
+}
+
+html:not(.dark) .about-differentiators .section-heading h2 {
+  color:#11110f;
+}
+
+html:not(.dark) .about-differentiators .section-heading h2 em {
+  color:#9b7621;
+}
+
+html.dark .about-differentiators .section-heading h2 {
+  color:#f6f2ea;
+}
+
+html.dark .about-differentiators .section-heading h2 em {
+  color:#f0d991;
+}
+
+/* Next.js image pipeline: preserve the compositions while serving responsive variants. */
+.visual-globe-image,
+.services-route-background {
+  object-fit:cover;
+  object-position:center;
+}
+
+.visual-globe-image {
+  z-index:0;
+}
+
+.services-section--route-bg .services-route-background {
+  object-position:center 54%;
+}
+
+.hero-globe-placeholder {
+  display:block;
+  width:100%;
+  height:100%;
+  border:1px solid rgba(255,242,189,.42);
+  border-radius:50%;
+  background:radial-gradient(circle at 34% 28%,#f0d991 0,#b8912f 46%,#4b3b14 100%);
+  box-shadow:0 0 11px rgba(240,217,145,.26);
+}
+
+@media (max-width:760px) {
+  .hero-globe-letter {
+    width:1em;
+    height:1em;
+    vertical-align:-.13em;
+  }
+
+  .services-section--route-bg .services-route-background {
+    object-position:62% center;
+  }
+
+  .round-link,
+  .footer-social-link {
+    min-width:44px;
+    min-height:44px;
+  }
+
+  .stepper-progress em {
+    font-size:8px;
+    line-height:1.25;
+  }
+
+  .contact-item a,
+  .contact-map-link,
+  .contact-map-fallback a,
+  .footer-contact a {
+    display:inline-flex;
+    align-items:center;
+    min-height:24px;
+  }
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, ArrowUpRight, Check, Mail } from "lucide-react";
 import { assets, services, tr, ui } from "@/lib/content";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -13,7 +14,7 @@ export default function ServiceDetail({ slug }: { slug: string }) {
   return (
     <main id="main-content">
       <section className={image ? "detail-hero has-image" : "detail-hero"}>
-        {image ? <img src={image} alt="" className="detail-hero-image" width="1200" height="1200" /> : <div className="detail-abstract"><span>{service.number}</span><img src={assets.logoOnDark} alt="" width="240" height="253" /></div>}
+        {image ? <Image src={image} alt="" className="detail-hero-image" fill sizes="100vw" quality={82} /> : <div className="detail-abstract"><span>{service.number}</span><Image src={assets.logoOnDark} alt="" width={240} height={253} sizes="220px" quality={75} /></div>}
         <div className="detail-overlay" />
         <div className="detail-content section-shell"><Link href="/services" className="back-link"><ArrowLeft size={16} />{isFr ? "Tous les services" : "All services"}</Link><p className="hero-pretitle"><span className="gold-dot" />{tr(service.eyebrow, language)}</p><h1>{tr(service.name, language)}</h1><p className="detail-lead">{tr(service.summary, language)}</p><Link href={`/contact?service=${service.slug}`} className="button-primary">{ui[language].request}<ArrowUpRight size={18} /></Link></div>
       </section>

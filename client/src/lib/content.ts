@@ -14,6 +14,7 @@ export const assets = {
   visa: "/assets/visa.webp",
   hotel: "/assets/hotel.webp",
   coaching: "/assets/coaching.webp",
+  aboutFounder: "/assets/about-founder.webp",
   globe: "/assets/globe.webp",
   wing: "/assets/wing.webp",
   flightRoute: "/assets/flight-route.webp",
@@ -27,6 +28,11 @@ export const whatsappIntro = {
   en: "Hello Trust Elite Travel, I would like some information to prepare my trip. Could you please assist me?",
 } satisfies Localized;
 export const whatsappHref = (phone: string, language: Language) => `https://wa.me/${phone}?text=${encodeURIComponent(whatsappIntro[language])}`;
+export const socialLinks = {
+  instagram: "https://www.instagram.com/trust_elite_travel/",
+  tiktok: "https://www.tiktok.com/@trust.elite.trave",
+  facebook: "https://www.facebook.com/trustelitetravel",
+} as const;
 
 export const services: TravelService[] = [
   { slug:"billets", number:"01", name:{fr:"Billetterie aérienne",en:"Air ticketing"}, eyebrow:{fr:"National & international",en:"National & international"}, summary:{fr:"Des billets adaptés à votre destination et à votre calendrier.",en:"Tickets tailored to your destination and schedule."}, longDescription:{fr:"Nous vous aidons à organiser votre transport et à choisir un itinéraire cohérent avec votre calendrier et votre projet.",en:"We help organize your transport and select a route that suits your schedule and travel plan."}, deliverables:[{fr:"Recherche d’itinéraires",en:"Route search"},{fr:"Comparaison des options",en:"Options comparison"},{fr:"Préparation au départ",en:"Departure preparation"}] },

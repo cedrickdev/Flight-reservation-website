@@ -17,6 +17,9 @@ build/
 # IDE and editor files
 .vscode/
 .idea/
+.codex/
+.cursor/
+memory/
 *.swp
 *.swo
 *~

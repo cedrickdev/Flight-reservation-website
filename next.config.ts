@@ -16,6 +16,12 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
+  images: {
+    formats: ["image/avif", "image/webp"],
+    qualities: [75, 82],
+    minimumCacheTTL: 86_400,
+    localPatterns: [{ pathname: "/assets/**", search: "" }],
+  },
   async headers() { return [{ source: "/:path*", headers: securityHeaders }]; },
 };
 
